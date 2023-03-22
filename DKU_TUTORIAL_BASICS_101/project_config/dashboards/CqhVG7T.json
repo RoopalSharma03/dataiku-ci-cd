@@ -1,0 +1,33 @@
+{
+  "pages": [
+    {
+      "id": "MCurGlf",
+      "grid": {
+        "tiles": []
+      },
+      "showTitle": false
+    }
+  ],
+  "owner": "alex",
+  "listed": true,
+  "name": "Default dashboard",
+  "showGrid": true,
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "alex"
+    },
+    "lastModifiedOn": 1492181307423
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "alex"
+    },
+    "lastModifiedOn": 1492181307423
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

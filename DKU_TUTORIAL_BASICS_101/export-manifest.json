@@ -1,0 +1,38 @@
+{
+  "exportedWithOptions": {
+    "exportUploads": true,
+    "exportManagedFS": true,
+    "exportAnalysisModels": true,
+    "exportSavedModels": true,
+    "exportManagedFolders": true,
+    "exportModelEvaluationStores": false,
+    "exportAllInputDatasets": false,
+    "exportAllDatasets": true,
+    "exportAllInputManagedFolders": false,
+    "exportGitRepository": false,
+    "exportInsightsData": true,
+    "useManualPluginsInfo": true,
+    "manualPluginsInfo": [],
+    "includedDatasetsData": [],
+    "includedSavedModels": [],
+    "includedModelEvaluationStores": [],
+    "includedManagedFolders": [],
+    "shareAllInputDatasets": false
+  },
+  "actualContent": {
+    "includedDatasets": [],
+    "includedSavedModels": [],
+    "includedManagedFolders": [],
+    "includedModelEvaluationStores": [],
+    "allAnalysisData": true,
+    "insightsData": true
+  },
+  "originalProjectKey": "DKU_TUTORIAL_BASICS_101",
+  "manifestVersion": 3,
+  "generatedWithDSSVersion": "10.0.5",
+  "generatedWithDSSConfVersion": "10040",
+  "exportedWithPlugins": [],
+  "requiredConnections": {},
+  "usedCodeEnvRefs": [],
+  "hasPartitionedDataset": false
+}
