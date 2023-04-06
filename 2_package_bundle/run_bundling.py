@@ -1,5 +1,5 @@
-import dataikuapi
-# from dataikuapi import DSSClient
+# import dataikuapi
+from dataikuapi import DSSClient
 import sys
 from datetime import datetime
 
