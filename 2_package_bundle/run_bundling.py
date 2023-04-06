@@ -1,4 +1,4 @@
-import dataikuapi
+import dataiku-api-client
 import sys
 from datetime import datetime
 
