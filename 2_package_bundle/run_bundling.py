@@ -7,7 +7,7 @@ apiKey = sys.argv[2]
 project = sys.argv[3]
 bundle_id = sys.argv[4]
 
-client = dataikuapi.DSSClient(host,apiKey )
+client = dataiku-api-client.DSSClient(host,apiKey )
 test_project = client.get_project(project)
 
 test_project.export_bundle(bundle_id)
