@@ -1,4 +1,4 @@
-import dataiku-api-client
+import dataikuapi
 import sys
 from datetime import datetime
 
@@ -7,7 +7,7 @@ apiKey = sys.argv[2]
 project = sys.argv[3]
 bundle_id = sys.argv[4]
 
-client = dataiku-api-client.DSSClient(host,apiKey )
+client = dataikuapi.DSSClient(host,apiKey )
 test_project = client.get_project(project)
 
 test_project.export_bundle(bundle_id)
