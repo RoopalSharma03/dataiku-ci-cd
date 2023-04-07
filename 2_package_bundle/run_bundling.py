@@ -1,7 +1,7 @@
 import dataikuapi
 # from dataikuapi import DSSClient
 import sys
-from datetime import datetime
+import datetime
 
 host = sys.argv[1]
 apiKey = sys.argv[2]
