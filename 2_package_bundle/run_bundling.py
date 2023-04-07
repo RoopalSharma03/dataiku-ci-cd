@@ -1,6 +1,5 @@
-# import dataiku-api-client
+import dataikuapi
 # from dataikuapi import DSSClient
-from dataikuapi.dss.notebook import DSSNotebook 
 import sys
 from datetime import datetime
 
