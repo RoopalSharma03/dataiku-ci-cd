@@ -13,7 +13,7 @@ test_project = client.get_project(project)
 
 test_project.export_bundle(bundle_id)
 # Publish bundle to Project Deployer
-test_project.publish_bundle(bundle_id)
+# test_project.publish_bundle(bundle_id)
 
 # Optional - Export the bundel zip to be archived
 test_project.download_exported_bundle_archive_to_file(bundle_id, bundle_id + ".zip")
