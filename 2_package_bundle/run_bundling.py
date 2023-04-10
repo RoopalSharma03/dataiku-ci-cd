@@ -1,19 +1,29 @@
 import dataikuapi
-# from dataikuapi import DSSClient
-import sys
-import datetime
 
+#Define the connections
+
+#Design
 host = sys.argv[1]
 apiKey = sys.argv[2]
-project = sys.argv[3]
-bundle_id = sys.argv[4]
 
-client = dataikuapi.DSSClient(host,apiKey )
-test_project = client.get_project(project)
+#Automation
+host_auto = "https://prod-dataiku-cloud-automation.ren.apps.ge.com" # example to be changed
+apiKey_auto = "lZ5gd7KdpU65eMHHoHT83HQI2Ivb12Jl" # example to be changed
 
-test_project.export_bundle(bundle_id)
-# Publish bundle to Project Deployer
-# test_project.publish_bundle(bundle_id)
+design_client= dataikuapi.DSSClient(host, apiKey)
+auto_client = dataikuapi.DSSClient(host_auto, apiKey_auto)
 
-# Optional - Export the bundel zip to be archived
-test_project.download_exported_bundle_archive_to_file(bundle_id, bundle_id + ".zip")
+version_bundle = "bundle_v1"
+#Export bundle
+project = design_client.get_project(sys.argv[3])
+project.export_bundle(version_bundle)
+project.download_exported_bundle_archive_to_file(version_bundle, "temp_bundle.zip")
+
+#Import bundle
+project_automation = auto_client.get_project(sys.argv[3])
+project_automation.import_bundle_from_archive("temp_bundle.zip")
+
+# Preload and activate bundle
+project_automation.preload_bundle(version_bundle) # for code envs
+project_automation.activate_bundle(version_bundle)
+
