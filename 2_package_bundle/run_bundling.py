@@ -49,17 +49,6 @@ test_project.download_exported_bundle_archive_to_file(bundle_id, bundle_id + ".z
 
 
 
-bundle_file = '/var/lib/jenkins/workspace/dss-pipeline-cicd/' + bundle_id + '.zip'
+with test_project.get_exported_bundle_archive_stream(bundle_id) as fp:
 
-
-
-
-print(os.path.getsize(bundle_file))
-
-
-
-
-
-# Publish bundle to Project Deployer
-
-auto_test_deployer.upload_bundle(bundle_file, bundle_id)
+    auto_test_deployer.upload_bundle(fp.content)
