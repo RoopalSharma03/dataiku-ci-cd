@@ -9,7 +9,7 @@ apiKey = sys.argv[2]
 
 #Automation
 host_auto = "https://prod-dataiku-cloud-automation.ren.apps.ge.com" # example to be changed
-apiKey_auto = "lZ5gd7KdpU65eMHHoHT83HQI2Ivb12Jl" # example to be changed
+apiKey_auto = "15EF75HI6GY2W3X3TDLMBZ8YBXSG72VU" # example to be changed
 
 design_client= dataikuapi.DSSClient(host, apiKey)
 auto_client = dataikuapi.DSSClient(host_auto, apiKey_auto)
