@@ -4,6 +4,8 @@ import sys
 
 from datetime import datetime
 
+import os
+
 
 
 
@@ -18,6 +20,7 @@ bundle_id = sys.argv[4]
 auto_host = sys.argv[5]
 
 auto_apiKey = sys.argv[6]
+
 
 
 
@@ -45,6 +48,18 @@ test_project.download_exported_bundle_archive_to_file(bundle_id, bundle_id + ".z
 
 
 
+
+bundle_file = '/var/lib/jenkins/workspace/dss-pipeline-cicd/' + bundle_id + '.zip'
+
+
+
+
+print(os.path.getsize(bundle_file))
+
+
+
+
+
 # Publish bundle to Project Deployer
 
-auto_test_deployer.upload_bundle("/var/lib/jenkins/workspace/dss-pipeline-cicd/" + bundle_id + ".zip", bundle_id)
+auto_test_deployer.upload_bundle(bundle_file, bundle_id)
