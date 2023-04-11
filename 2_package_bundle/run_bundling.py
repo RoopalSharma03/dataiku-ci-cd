@@ -44,11 +44,5 @@ test_project.export_bundle(bundle_id)
 # Optional - Export the bundel zip to be archived
 
 test_project.download_exported_bundle_archive_to_file(bundle_id, bundle_id + ".zip")
-
-
-
-
-
 with test_project.get_exported_bundle_archive_stream(bundle_id) as fp:
-
-    auto_test_deployer.upload_bundle(fp.content)
+    auto_test_deployer.upload_bundle(fp.content)
