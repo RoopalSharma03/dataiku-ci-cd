@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 
 import os
-import static org.jfrog.hudson.pipeline.common.types.deployers.Deployer.addDeployedArtifactsActionFromModules;
+
 
 
 
