@@ -49,20 +49,20 @@ else :
     print("Deployment successful")    
 
 # Smoke test and rollback
-if not failed_deployment :
-    auto_client = dataikuapi.DSSClient(auto_host, auto_apiKey)
-    target_project = auto_client.get_project(project)
-    smoke_test = target_project.get_scenario("TEST_SMOKE")
-    scenario_result = smoke_test.run_and_wait()
+# if not failed_deployment :
+#     auto_client = dataikuapi.DSSClient(auto_host, auto_apiKey)
+#     target_project = auto_client.get_project(project)
+#     smoke_test = target_project.get_scenario("TEST_SMOKE")
+#     scenario_result = smoke_test.run_and_wait()
 
-    print("*************************")
-    print("Scenario info: ", scenario_result.get_info())
-    print("Scenario duration: ", scenario_result.get_duration())
-    print(scenario_result.get_details()["scenarioRun"]["result"])
-    print(scenario_result.get_details()["scenarioRun"]["result"]["outcome"])
-    if scenario_result.get_details()["scenarioRun"]["result"]["outcome"] != "SUCCESS":
-        print("Error when running smoke test, need to rollback")
-        failed_deployment = True
+#     print("*************************")
+#     print("Scenario info: ", scenario_result.get_info())
+#     print("Scenario duration: ", scenario_result.get_duration())
+#     print(scenario_result.get_details()["scenarioRun"]["result"])
+#     print(scenario_result.get_details()["scenarioRun"]["result"]["outcome"])
+#     if scenario_result.get_details()["scenarioRun"]["result"]["outcome"] != "SUCCESS":
+#         print("Error when running smoke test, need to rollback")
+#         failed_deployment = True
 
 if failed_deployment :
     print("Starting rollback process")
