@@ -14,7 +14,7 @@ failed_deployment = False
 
 # Deploy the new bundle
 print("Searching for existing deployment of '{}' on infra '{}'".format( project , infra))
-pdpl_client = dataikuapi.DSSClient(pdpl_host, pdpl_apiKey)
+pdpl_client = dataikuapi.DSSClient(auto_host, auto_apiKey)
 pdpl = pdpl_client.get_projectdeployer()
 pdpl_proj = pdpl.get_project(project)
 print(pdpl_proj)
