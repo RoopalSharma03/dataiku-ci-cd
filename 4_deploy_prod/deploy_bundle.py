@@ -7,7 +7,7 @@ project = sys.argv[3]
 bundle_id = sys.argv[4]
 infra = sys.argv[5]
 auto_host = sys.argv[6]
-auto_apiKey = sys.argv[7]
+auto_apiKey = "wCJ94wJXeoHfXe0wXi6LIFcINIUwcjI5"
 
 previous_bundle_id = ""
 failed_deployment = False
