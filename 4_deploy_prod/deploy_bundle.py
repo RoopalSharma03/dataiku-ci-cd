@@ -17,6 +17,7 @@ print("Searching for existing deployment of '{}' on infra '{}'".format( project 
 pdpl_client = dataikuapi.DSSClient(pdpl_host, pdpl_apiKey)
 pdpl = pdpl_client.get_projectdeployer()
 pdpl_proj = pdpl.get_project(project)
+print(pdpl_proj)
 status = pdpl_proj.get_status()
 print(status)
 deployments = pdpl_proj.get_status().get_deployments(infra)
